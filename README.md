@@ -1,8 +1,7 @@
-\ ##Real-Time Application Log Monitoring \& Alerting System on AWS
+# Real-Time Application Log Monitoring & Alerting System on AWS
 
 
-
-\📌 Project Overview
+📌 Project Overview
 
 
 
@@ -20,45 +19,23 @@ The project simulates a real-world production monitoring scenario commonly used 
 
 
 
-\ 🛠 AWS Services Used
+ 🛠 AWS Services Used
 
 
 
-\- Amazon EC2 \:– Hosts the application and generates logs
+- Amazon EC2 :– Hosts the application and generates logs
 
-\- Amazon CloudWatch Agent \: – Collects logs from EC2
+- Amazon CloudWatch Agent : – Collects logs from EC2
 
-\- Amazon CloudWatch Logs\: – Centralized log storage
+- Amazon CloudWatch Logs : – Centralized log storage
 
-\- CloudWatch Metric Filters \: – Converts ERROR logs into metrics
+- CloudWatch Metric Filters : – Converts ERROR logs into metrics
 
-\- CloudWatch Alarms \: – Triggers alerts based on thresholds
+- CloudWatch Alarms : – Triggers alerts based on thresholds
 
-\- Amazon SNS \: – Sends email notifications
+- Amazon SNS : – Sends email notifications
 
-\- AWS IAM \: – Secure role-based access management
-
-
-
----
-
-
-
-\## 🔄 Project Workflow
-
-
-
-1\. A Python application running on EC2 continuously writes logs to `/var/log/app.log`
-
-2\. CloudWatch Agent monitors the log file and pushes logs to CloudWatch Logs
-
-3\. A metric filter scans logs for the keyword `ERROR`
-
-4\. Each detected error increments a custom CloudWatch metric
-
-5\. A CloudWatch alarm monitors the metric value
-
-6\. When the threshold is breached, an SNS email alert is triggered instantly
+- AWS IAM : – Secure role-based access management
 
 
 
@@ -66,7 +43,29 @@ The project simulates a real-world production monitoring scenario commonly used 
 
 
 
-\🧩 Application Code
+🔄 Project Workflow
+
+
+
+1. A Python application running on EC2 continuously writes logs to `/var/log/app.log`
+
+2. CloudWatch Agent monitors the log file and pushes logs to CloudWatch Logs
+
+3. A metric filter scans logs for the keyword `ERROR`
+
+4. Each detected error increments a custom CloudWatch metric
+
+5. A CloudWatch alarm monitors the metric value
+
+6. When the threshold is breached, an SNS email alert is triggered instantly
+
+
+
+---
+
+
+
+🧩 Application Code
 
 
 
@@ -107,17 +106,17 @@ while True:
 
 ---
 
-\🚀 Future Enhancements
+🚀 Future Enhancements
 
-1\ Slack or SMS notifications
+1 Slack or SMS notifications
 
-2\ Lambda-based auto-remediation
+2 Lambda-based auto-remediation
 
-3\ CloudWatch dashboards
+3 CloudWatch dashboards
 
-4\ Infrastructure as Code (Terraform / CloudFormation)
+4 Infrastructure as Code (Terraform / CloudFormation)
 
-5\ Auto Scaling integration
+5 Auto Scaling integration
 
 ---
 

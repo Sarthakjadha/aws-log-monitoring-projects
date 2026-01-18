@@ -1,8 +1,8 @@
-\# Real-Time Application Log Monitoring \& Alerting System on AWS
+\ Real-Time Application Log Monitoring \& Alerting System on AWS
 
 
 
-📌 Project Overview
+\📌 Project Overview
 
 
 
@@ -20,39 +20,23 @@ The project simulates a real-world production monitoring scenario commonly used 
 
 
 
-\## 🏗 Architecture Diagram
+\ 🛠 AWS Services Used
 
 
 
-The following diagram illustrates the end-to-end architecture of the system:
+\- Amazon EC2 \:– Hosts the application and generates logs
 
+\- Amazon CloudWatch Agent \: – Collects logs from EC2
 
+\- Amazon CloudWatch Logs\: – Centralized log storage
 
-!\[Architecture Diagram](architecture/architecture-diagram.png)
+\- CloudWatch Metric Filters \: – Converts ERROR logs into metrics
 
+\- CloudWatch Alarms \: – Triggers alerts based on thresholds
 
+\- Amazon SNS \: – Sends email notifications
 
----
-
-
-
-\## 🛠 AWS Services Used
-
-
-
-\- \*\*Amazon EC2\*\* – Hosts the application and generates logs
-
-\- \*\*Amazon CloudWatch Agent\*\* – Collects logs from EC2
-
-\- \*\*Amazon CloudWatch Logs\*\* – Centralized log storage
-
-\- \*\*CloudWatch Metric Filters\*\* – Converts ERROR logs into metrics
-
-\- \*\*CloudWatch Alarms\*\* – Triggers alerts based on thresholds
-
-\- \*\*Amazon SNS\*\* – Sends email notifications
-
-\- \*\*AWS IAM\*\* – Secure role-based access management
+\- AWS IAM \: – Secure role-based access management
 
 
 
@@ -82,7 +66,7 @@ The following diagram illustrates the end-to-end architecture of the system:
 
 
 
-\## 🧩 Application Code
+\🧩 Application Code
 
 
 
@@ -121,54 +105,38 @@ while True:
 &nbsp;   time.sleep(10)
 
 
+---
 
-\##🚀 Future Enhancements
+\🚀 Future Enhancements
 
+1\ Slack or SMS notifications
 
+2\ Lambda-based auto-remediation
 
-Slack or SMS notifications
+3\ CloudWatch dashboards
 
+4\ Infrastructure as Code (Terraform / CloudFormation)
 
+5\ Auto Scaling integration
 
-Lambda-based auto-remediation
-
-
-
-CloudWatch dashboards
-
-
-
-Infrastructure as Code (Terraform / CloudFormation)
+---
 
 
-
-Auto Scaling integration
-
-
-##📁 Project Structure
+📁 Project Structure
 aws-log-monitoring-project/
-
-│
-
 ├── README.md
-
 ├── app.py
-
-├── screenshots/
-
-│   ├── ec2-instance.png
-
-│   ├── cloudwatch-logs.png
-
-│   ├── metric-filter.png
-
-│   ├── alarm.png
-
-│   └── sns-email.png
-
-└── architecture/
-
-&nbsp;   └── architecture-diagram.png
+├── architecture/
+│   └── architecture-diagram.png
+└── screenshots/
+    ├── Matric.png
+    ├── app group error.png
+    ├── app log group.png
+    ├── cloudwatch.png
+    ├── ec2.png
+    ├── email.png
+    ├── sns.png
+    └── terminal.png
 
 
 

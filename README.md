@@ -37,15 +37,11 @@ The project simulates a real-world production monitoring scenario commonly used 
 
 - AWS IAM : – Secure role-based access management
 
-
-
 ---
-
-
 
 🔄 Project Workflow
 
-
+EC2 → CloudWatch Agent → CloudWatch Logs → Metric Filter → Alarm → SNS → Email
 
 1. A Python application running on EC2 continuously writes logs to `/var/log/app.log`
 

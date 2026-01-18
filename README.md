@@ -4,11 +4,9 @@
 📌 Project Overview
 
 
-
 This project implements a real-time application log monitoring and alerting system using AWS services.  
 
 It continuously collects application logs from an EC2 instance, analyzes them using Amazon CloudWatch, and automatically sends email alerts when ERROR-level log events are detected.
-
 
 
 The project simulates a real-world production monitoring scenario commonly used in DevOps and cloud environments.
